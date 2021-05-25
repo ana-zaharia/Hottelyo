@@ -1,0 +1,255 @@
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Stiluri globale*/
+html{
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+}
+body{
+     font-family: 'Pattaya', sans-serif;
+     font-size: 1.6rem;
+     color: #FDFEFE;
+     width: 100%;
+     height: 100%;
+
+ }
+
+ a{
+     text-decoration: none;
+     color: inherit;
+ }
+
+ ul{
+     list-style: none;
+ }
+
+section{
+     padding: 5rem 0;
+ }
+
+ h2{
+     text-shadow: 1px 1px 1rem rgba(0,0,0,0.9);
+ }
+/*stiluri reutilizabile*/
+ .container{
+     width: 100%;
+     max-width: 120rem;
+     padding: 0 1.5rem;
+     margin: 0 auto;
+ }
+
+.btn{
+    color: #FDFEFE;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: .5rem 3.5rem;
+    border: none;
+    border-radius: 10rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+ /*Stiluri header*/
+.header{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #D98880;
+    z-index: 999;
+}
+
+/*Stiluri nav*/
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    max-width: 80%;
+}
+
+    .hamburger-menu {
+        font-size: 2.6rem;
+        color: #FDFEFE;
+        cursor: pointer;
+        position: relative;
+        z-index: 1500;
+    }
+
+    .hamburger-menu .fa-times {
+        display: none;
+    }
+
+    .menu-open .hamburger-menu .fa-times {
+        display: block;
+    }
+
+    .menu-open .hamburger-menu .fa-bars {
+        display: none;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #D98880;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1400;
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity .5s;
+    }
+
+    .menu-open .nav-list {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .nav-item:not(:last-child) {
+        margin-bottom: .5rem;
+    }
+
+    .nav-link {
+        display: block;
+        color: #FDFEFE;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 1rem;
+    }
+
+/*stil hero*/
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url("./images/hero.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.main-heading{
+    color: #FDFEFE;
+    line-height: 1;
+    text-shadow: 1px 1px 1rem rgba(0,0,0,.5);
+    margin-bottom: 2.5rem;
+}
+
+.title{
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.subtitle{
+    font-size: 3.6rem;
+    font-weight: 300;
+    font-family: Pattaya;
+}
+
+
+.btn-gradient{
+    background-image: linear-gradient(#e66465, #f4d03f);
+}
+
+.btn-gradient:hover{
+    background-image: linear-gradient(#f4d03f,#e66465 );
+}
+
+.dots{
+    font-size: 2.4rem;
+    margin-left: .5rem;
+    opacity: .75;
+}
+/*alt stil pentru hamburger-menu*/
+@media screen and (min-width: 768px) {
+    .hamburger-menu {
+        display: none;
+    }
+
+    .nav-list {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: initial;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .nav-item:not(:last-child) {
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+        font-weight: normal;
+        transition: color .5s;
+    }
+
+    .nav-link:hover {
+        color: black;
+    }
+}
+
+
+ /*stil ceas*/
+#clock{
+    font-size: 2rem;
+    font-family: "Book Antiqua";
+    color: darkred;
+    right: 1rem;
+
+}
+
+#text{
+    font-size: 2rem;
+   font-family: 'Dubai';
+   position: relative;
+}
+
+.section2{
+    background-image: url("./images/blurry.jpg");
+}
+
+.slider{
+    width: 80%;
+    margin: 0 auto;
+}
+
