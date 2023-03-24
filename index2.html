@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles2.css">
-
     <title>Offers</title>
-
 </head>
 <body>
 <main>
+
 <div class="navbar-fixed">
 <nav>
     <div class="nav-wrapper">
@@ -23,6 +22,15 @@
     </div>
 </nav>
 </div>
+
+    <div>
+        <button type="button" class="collapsible">Preferred destination</button>
+        <div class="content">
+            <h3><script>
+                document.write(localStorage.getItem('PreferredDestination'));
+            </script></h3>
+        </div>
+    </div>
 
 <div class="design">
 <div class="row">
@@ -73,7 +81,7 @@
                 <div class="card" style="width: 300px; left: 30%;">
                     <div class="card-image">
                         <img class="materialboxed" src="./images/beach.jpg" style="width: 300px;" alt="">
-                        <span class="card-title teal accent-4">Beach</span>
+                        <span class="card-title teal accent-4" id="beach">Beach</span>
                     </div>
                     <div class="card-content">
                         <p>Do you love warm weather and getting tanned?
@@ -153,6 +161,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="jqueries.js"></script>
+<script src="collapbutton.js"></script>
 
 
 </body>

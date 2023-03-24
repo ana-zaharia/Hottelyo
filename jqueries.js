@@ -20,3 +20,7 @@ $(document).ready(function(){
     $('select').formSelect();
 });
 
+$(window).load(function(){
+    $('#exampleModal').modal('show');
+});
+

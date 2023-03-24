@@ -1,0 +1,12 @@
+<CATALOG>
+    <CD>
+        <HOTEL>DelLuna</HOTEL>
+        <CITY>New Jersey</CITY>
+        <COUNTRY>USA</COUNTRY>
+    </CD>
+    <CD>
+        <HOTEL>Eclipse</HOTEL>
+        <CITY>Los Angeles</CITY>
+        <COUNTRY>USA</COUNTRY>
+    </CD>
+</CATALOG>

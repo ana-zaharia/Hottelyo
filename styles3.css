@@ -113,3 +113,8 @@ h1,h2 {
 .buton{
     text-align: center;
 }
+@media screen and (max-width: 768px) {
+body{
+    background-color: mistyrose;
+}
+}

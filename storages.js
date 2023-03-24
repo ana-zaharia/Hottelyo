@@ -1,21 +1,20 @@
-function store(){ //stores items in sessionStorage
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let loc = document.getElementById('place');
+function store() { //stores items in sessionStorage
+    var nume = document.getElementById('numePersoana');
+
+    var dest = document.getElementById('locatieOras');
 
 
-    const contactInfos = {
-        name: name,
-        email: email,
-    }
+    sessionStorage.setItem('Name', nume.value);
 
-    window.sessionStorage.setItem('contactInfos',JSON.stringify(contactInfos));
+    localStorage.setItem('PreferredDestination', dest.value);
+}
+function afisare(){
+    var x = document.getElementById('snackbar');
 
-    localStorage.setItem('bookingArea',loc.value);
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 
-
-window.onload =function() {
-    document.getElementById("idForm").onsubmit = store;
-
-}
